@@ -26,6 +26,7 @@ public class main {
            -p: Path de la politica
            -r: Path del request (solo aplicable en balana o sun)
            -m: Motor a usar (balana, sun o xmldsig)
+           -t: Indica si se debe ejecutar en modo test
         */
                 
         try {
