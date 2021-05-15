@@ -1,0 +1,20 @@
+/BaseCombiningAlgFactory.java/1.4/Mon May 24 20:55:07 2004//
+/CombiningAlgFactory.java/1.9/Mon May 17 20:33:45 2004//
+/CombiningAlgFactoryProxy.java/1.2/Wed Mar 17 18:03:38 2004//
+/CombiningAlgorithm.java/1.3/Wed Mar 17 18:03:38 2004//
+/DenyOverridesPolicyAlg.java/1.5/Tue Mar 23 23:38:52 2004//
+/DenyOverridesRuleAlg.java/1.5/Tue Mar 23 23:38:55 2004//
+/FirstApplicablePolicyAlg.java/1.4/Tue Mar 23 23:38:55 2004//
+/FirstApplicableRuleAlg.java/1.4/Tue Mar 23 23:38:55 2004//
+/OnlyOneApplicablePolicyAlg.java/1.4/Tue Mar 23 23:38:55 2004//
+/OrderedDenyOverridesPolicyAlg.java/1.2/Wed Mar 17 18:03:38 2004//
+/OrderedDenyOverridesRuleAlg.java/1.2/Wed Mar 17 18:03:38 2004//
+/OrderedPermitOverridesPolicyAlg.java/1.2/Wed Mar 17 18:03:38 2004//
+/OrderedPermitOverridesRuleAlg.java/1.2/Wed Mar 17 18:03:38 2004//
+/PermitOverridesPolicyAlg.java/1.5/Tue Mar 23 23:38:55 2004//
+/PermitOverridesRuleAlg.java/1.5/Tue Mar 23 23:38:55 2004//
+/PolicyCombiningAlgorithm.java/1.3/Wed Mar 17 18:03:38 2004//
+/RuleCombiningAlgorithm.java/1.4/Wed Mar 17 18:03:38 2004//
+/package.html/1.1.1.1/Thu Feb 13 22:19:10 2003//
+/StandardCombiningAlgFactory.java/1.6/Wed Jul 14 00:40:54 2004//
+D

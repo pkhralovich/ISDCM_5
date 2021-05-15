@@ -1,0 +1,26 @@
+/AnyURIAttribute.java/1.2/Wed Mar 17 18:03:38 2004//
+/AttributeDesignator.java/1.7/Fri Jun  4 17:50:39 2004//
+/AttributeFactory.java/1.7/Mon May 17 20:33:45 2004//
+/AttributeFactoryProxy.java/1.2/Wed Mar 17 18:03:38 2004//
+/AttributeProxy.java/1.2/Wed Mar 17 18:03:38 2004//
+/AttributeSelector.java/1.10/Fri Jun  4 17:50:39 2004//
+/AttributeValue.java/1.6/Fri May 14 20:43:07 2004//
+/BagAttribute.java/1.3/Wed Mar 17 18:03:38 2004//
+/Base64.java/1.2/Wed Mar 17 18:03:38 2004//
+/Base64BinaryAttribute.java/1.2/Wed Mar 17 18:03:38 2004//
+/BaseAttributeFactory.java/1.4/Mon May 24 20:55:07 2004//
+/BooleanAttribute.java/1.2/Wed Mar 17 18:03:38 2004//
+/DateAttribute.java/1.2/Wed Mar 17 18:03:38 2004//
+/DateTimeAttribute.java/1.3/Wed Mar 17 18:03:38 2004//
+/DayTimeDurationAttribute.java/1.3/Wed Mar 17 18:03:38 2004//
+/DoubleAttribute.java/1.2/Wed Mar 17 18:03:38 2004//
+/HexBinaryAttribute.java/1.2/Wed Mar 17 18:03:38 2004//
+/IntegerAttribute.java/1.2/Wed Mar 17 18:03:38 2004//
+/RFC822NameAttribute.java/1.2/Wed Mar 17 18:03:38 2004//
+/StringAttribute.java/1.4/Wed Mar 17 18:03:38 2004//
+/TimeAttribute.java/1.5/Wed Mar 17 18:03:38 2004//
+/X500NameAttribute.java/1.2/Wed Mar 17 18:03:38 2004//
+/YearMonthDurationAttribute.java/1.3/Wed Mar 17 18:03:38 2004//
+/package.html/1.1.1.1/Thu Feb 13 22:19:10 2003//
+D/proxy////
+/StandardAttributeFactory.java/1.6/Wed Jul 14 00:40:54 2004//
