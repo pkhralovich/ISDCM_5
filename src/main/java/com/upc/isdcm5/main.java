@@ -3,6 +3,7 @@ package com.upc.isdcm5;
 import com.upc.isdcm5.xacml.SunXACML;
 import com.upc.isdcm5.xacml.BaseXACML;
 import com.upc.isdcm5.xacml.BalanaXACML;
+import com.upc.isdcm5.xmldsig.XmlDsig;
 
 public class main {
     private static final String ACTION_BALANA = "balana";
@@ -43,6 +44,7 @@ public class main {
                 }
                 case ACTION_XMLDSIG: {
                     signXML();
+                    break;
                 }
                 default: {
                     throw new Exception("Unexpected action");
@@ -103,12 +105,15 @@ public class main {
                 argument.equals(PARAM_POLICY) || argument.equals(PARAM_REQUEST);
     }
     
-    private static void signXML() {
+    private static void signXML() throws Exception {
+        validatePaths(false);
         
+        XmlDsig signer = new XmlDsig();
+        System.out.println(signer.sign(policyPath)); 
     }
     
     private static void processTest(Boolean isBalana) throws Exception {
-        validatePaths();
+        validatePaths(true);
         
         BaseXACML processor;
         if (isBalana) processor = new BalanaXACML(policyPath);
@@ -122,24 +127,24 @@ public class main {
     }
     
     private static void processBalana() throws Exception {
-        validatePaths();
+        validatePaths(true);
         
         BalanaXACML balana = new BalanaXACML(policyPath);
         System.out.println(balana.processRequest(requestPath));
     }
     
     private static void processSun() throws Exception {
-        validatePaths();
+        validatePaths(true);
         
         SunXACML sun = new SunXACML(policyPath);
         System.out.println(sun.processRequest(requestPath));
     }
     
-    private static void validatePaths() throws Exception {
+    private static void validatePaths(Boolean validateRequest) throws Exception {
         if (isEmptyPath(policyPath)) 
             throw new Exception("Policy path is compulsory");
         
-        if (isEmptyPath(requestPath))
+        if (validateRequest && isEmptyPath(requestPath))
             throw new Exception("Request path is compulsory");
     }
     
