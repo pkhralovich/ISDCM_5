@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Request xmlns="urn:oasis:names:tc:xacml:1.0:context"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Subject>
+      <Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id"
+                 DataType="http://www.w3.org/2001/XMLSchema#string">
+        <AttributeValue>leoVergara</AttributeValue>
+      </Attribute>
+      <Attribute AttributeId="perfil"
+                 DataType="http://www.w3.org/2001/XMLSchema#string">
+        <AttributeValue>premium</AttributeValue>
+      </Attribute>
+      <Attribute AttributeId="countCopy"
+                 DataType="http://www.w3.org/2001/XMLSchema#integer">
+        <AttributeValue>1</AttributeValue>
+      </Attribute>
+  </Subject>
+   <Resource>
+    <Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" 
+    		   DataType="http://www.w3.org/2001/XMLSchema#string">
+      <AttributeValue>urn:mvideo:Baztan.mp4</AttributeValue>
+    </Attribute>
+  </Resource>
+  <Action>
+    <Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+               DataType="http://www.w3.org/2001/XMLSchema#string">
+      <AttributeValue>copy</AttributeValue>
+    </Attribute>
+  </Action>
+</Request>

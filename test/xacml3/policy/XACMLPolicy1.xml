@@ -1,0 +1,50 @@
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17 http://docs.oasis-open.org/xacml/3.0/xacml-core-v3-schema-wd-17.xsd"
+	PolicyId="urn:isdcm:policyid:1"
+	RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable"
+	Version="1.0">
+	<Description> Politica reproduccion video Mavericksv </Description>
+	<Target/>
+	<Rule RuleId="urn:oasis:names:tc:xacml:2.0:ejemplo:RuleMavericksv" Effect="Permit">
+		<Description> Cualquier usuario puede reproducir la película urn:mvideo: Mavericksv.mp4 antes de final de año </Description>
+		<Target>
+			<AnyOf>
+				<AllOf>
+					<!-- Which resource -->
+					<Match MatchId="urn:oasis:names:tc:xacml:1.0:function:regexp-string-match">
+						<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+							>urn:mvideo:Mavericksv.mp4</AttributeValue>
+						<AttributeDesignator MustBePresent="false"
+							Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+							AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id"
+							DataType="http://www.w3.org/2001/XMLSchema#string"/>
+					</Match>
+
+					<!-- Which action  -->
+					<Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+						<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"
+							>play</AttributeValue>
+						<AttributeDesignator MustBePresent="false"
+							Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+							AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+							DataType="http://www.w3.org/2001/XMLSchema#string"/>
+					</Match>
+
+				</AllOf>
+			</AnyOf>
+		</Target>
+
+		<Condition>
+			<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:date-less-than-or-equal">
+				<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:date-one-and-only">
+					<AttributeDesignator MustBePresent="false"
+						Category="urn:oasis:names:tc:xacml:3.0:date" AttributeId="accessDate"
+						DataType="http://www.w3.org/2001/XMLSchema#date"/>
+				</Apply>
+				<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#date"
+					>2015-01-01</AttributeValue>
+			</Apply>
+		</Condition>
+	</Rule>
+</Policy>

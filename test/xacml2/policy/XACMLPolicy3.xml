@@ -1,0 +1,42 @@
+<Policy PolicyId="ExamplePolicy3" 
+	RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:permit-overrides"> 
+	<Description> Documental Planets </Description> 
+	<Target/> 
+	<Rule RuleId="urn:oasis:names:tc:xacml:2.0:ejemplo:RulePlanets" Effect="Permit"> 
+		<Description>Todos los usuarios del Reino Unido pueden reproducir el documental de la BBC urn:bbc:mdocum:Planets.mp4</Description>
+		<Target>
+			<Subjects>
+		        <AnySubject/>
+		    </Subjects>
+			<Resources> 
+				<Resource> 
+					<ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:regexp-string-match"> 
+						<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">urn:bbc:mdocum:Planets.mp4</AttributeValue> 
+						<ResourceAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" 
+													 DataType="http://www.w3.org/2001/XMLSchema#string"/> 
+					</ResourceMatch> 
+				</Resource> 
+			</Resources> 
+			<Actions> 
+				<Action> 
+					<ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal"> 
+						<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">playDocumental</AttributeValue> 
+						<ActionAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" 
+												   DataType="http://www.w3.org/2001/XMLSchema#string"/> 
+					</ActionMatch> 
+				</Action> 
+			</Actions> 
+		</Target> 
+                
+		- <Condition FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+- <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+  <SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:2.0:subject:country" DataType="http://www.w3.org/2001/XMLSchema#string" /> 
+  </Apply>
+  <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Reino Unido</AttributeValue> 
+  </Condition>
+
+	</Rule> 
+        
+        <Rule RuleId="urn:oasis:names:tc:xacml:2.0:lab66:FinalRule" Effect="Deny" /> 
+
+</Policy>
